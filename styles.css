@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background:linear-gradient(#c385f7,#fff 258px);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    background: linear-gradient(#c7aac760,#d7d6ff 258px);
+    background-repeat: no-repeat;
+    /* border: solid 1px black; */
+    /* background-position-y: 40px; */
+
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.paa {
+    margin-top: 15%;
+    margin-left: 1%;
+    /* background-color: white; */
+    background: size 10%;
+}
+
+.mie {
+    height: 200px;
+    margin: 0 -60px;
+    animation: kaanny 5s infinite;
+}
+
+.second-level-menu {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.top-level-menu li:hover > ul {
+    display: block;
+    background-color: #999;
+    border-radius: 10px;
+    width: auto;
+    padding-right: 20px;
+}
+
+.second-level-menu > li {
+    position: relative;
+    height: 30px;
+}
+
+.top-level-menu > li:hover,
+.second-level-menu > li:hover {
+    color: black;
+}
+.top-level-menu a {
+    font: bold 14px Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    display: block;
+    line-height: 30px;
+}
+
+.top-level-menu a:hover {
+    color:rgb(187, 78, 0);
+    text-decoration: none;
+}
+
+.korostus {
+    color: #007bff;
+    animation: haivutus 2s;
+}
+
+.kuvat {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.naytto {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+.naytto:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px; 
+}
+.otsikko {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px; 
+    font-weight: bold;
+    color: #333; 
+}
+.hamburger-menu {
+    display: none;
+    color: black;
+}
+
+.hamburger-menu .icon {
+    display: none;
+}
+
+
+@keyframes haivutus {
+    from { 
+        opacity: 0; 
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+@keyframes kaanny {
+    from { 
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .kuvat {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 10px;
+        padding: 15px;
+        z-index: 1000;
+    }
+
+    .hamburger-menu .icon {
+        display: block;
+        cursor: pointer;
+        color: black;
+        
+    }
+    .hamburger-menu .icon:hover {
+        color: rgb(187, 78, 0);
+    }
+    .top-level-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background-color: #fff;
+        top: 80px;
+        margin-left: 0;
+        padding-left: 0;
+        left: 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .top-level-menu li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+        position: relative;
+    }
+    .top-level-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .top-level-menu.responsive {
+        display: flex;
+    }
+    .second-level-menu {
+        padding-bottom: 15px;
+        display: none;
+        position: absolute;
+        background-color: white; 
+        width: auto;
+        left: 50%;
+        border: none;
+        text-align: center;
+    }
+    .top-level-menu li:hover > .second-level-menu {
+        display: block;
+    }
+    .second-level-menu li {
+        padding: 10px 15px; 
+        border: none;
+    }
+}

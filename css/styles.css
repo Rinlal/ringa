@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(#c385f7, #fff 258px);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navbar {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(#c7aac760, #d7d6ff 258px);
+    background-repeat: no-repeat;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.paa {
+    margin-top: 15%;
+    margin-left: 1%;
+}
+
+.mie {
+    height: 200px;
+    margin: 0 -60px;
+    animation: kaanny 5s infinite;
+}
+
+.korostus {
+    color: #007bff;
+    animation: haivutus 2s;
+}
+
+.naytto {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+.naytto:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px; 
+}
+
+.otsikko {
+    text-align: center;
+    margin-bottom: 5px; 
+    font-weight: bold;
+    color: #333; 
+}
+
+@keyframes haivutus {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes kaanny {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-toggler {
+        display: block;
+    }
+    
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-collapse.collapsing {
+        display: block;
+        height: auto;
+        transition: height 0.3s ease;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding-left: 15px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        float: none;
+    }
+}
+
