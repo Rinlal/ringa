@@ -19,7 +19,7 @@ nav {
     height: 80px;
     width: 100%;
     justify-content: space-between;
-    background: linear-gradient(#c7aac760,#d7d6ff 258px);
+    /* background: linear-gradient(#c7aac760,#d7d6ff 258px); */
     background-repeat: no-repeat;
     /* border: solid 1px black; */
     /* background-position-y: 40px; */
@@ -93,7 +93,7 @@ nav ul li a {
 }
 
 .top-level-menu a:hover {
-    color:rgb(187, 78, 0);
+    color:rgb(255, 214, 7);
     text-decoration: none;
 }
 
@@ -176,7 +176,7 @@ nav ul li a {
         
     }
     .hamburger-menu .icon:hover {
-        color: rgb(187, 78, 0);
+        color: rgb(255, 214, 7);
     }
     .top-level-menu {
         display: none;
