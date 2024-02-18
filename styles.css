@@ -134,7 +134,13 @@ nav ul li a {
 .hamburger-menu .icon {
     display: none;
 }
-
+.peli {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    position: relative;
+    text-decoration:#007bff
+}
 
 @keyframes haivutus {
     from { 
@@ -220,5 +226,8 @@ nav ul li a {
     .second-level-menu li {
         padding: 10px 15px; 
         border: none;
+    }
+    .peli {
+        margin-left: 90px;
     }
 }
